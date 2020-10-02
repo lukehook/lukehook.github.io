@@ -20,7 +20,7 @@
     check = async () => fetch("/api/ip").then(r=>r.json()).then(data => {
       const country = data.countryCode;
       const ip = data.connectingIP;
-      document.getElementById("result").textContent = `You are currently browsing from IP ${ip} in ${country}`;
+      document.getElementById("result").textContent = `You are currently browsing from IP ${ip} in ${country}.`;
     });
   </script>
 </body>
