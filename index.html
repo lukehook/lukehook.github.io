@@ -4,10 +4,11 @@
   <script type="text/javascript">
     window.onload = async () => fetch("/api/ip").then(r=>r.json()).then(data => {
       document.getElementById("country").textContent = data.countryCode;
+      document.getElementById("ip").textContent = data.connectedIP;
     });
   </script>
 <h1>Hello World</h1>
 <h2>My name is Luke Hook</h2>
-  <p>You are currently browsing from <span id="country"></span>.</p>
+  <p>You are currently browsing from <span id="ip"></span> in <span id="country"></span>.</p>
 </body>
 </html>
