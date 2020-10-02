@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
+<h1>Hello World</h1>
+<h2>My name is Luke Hook</h2>
+  
+  <button onclick="check()">Click me</button>
+  
+  <p id="result"></p>
   <script type="text/javascript">
     check = async () => fetch("/api/ip").then(r=>r.json()).then(data => {
       const country = data.countryCode;
@@ -8,11 +14,5 @@
       document.getElementById("result").textContent = `You are currently browsing from IP ${ip} in ${country}`;
     });
   </script>
-<h1>Hello World</h1>
-<h2>My name is Luke Hook</h2>
-  
-  <button onclick="check()">Click me</button>
-  
-  <p id="result"></p>
 </body>
 </html>
