@@ -3,11 +3,11 @@
 <body>
   <script type="text/javascript">
     window.onload = async () => fetch("/api/ip").then(r=>r.json()).then(data => {
-    console.log(data);
-});
+      document.getElementById("country").textContent = data.countryCode;
+    });
   </script>
 <h1>Hello World</h1>
 <h2>My name is Luke Hook</h2>
-<p>This site is hosted with GitHub Pages.</p>
+  <p>You are currently browsing from <span id="country"></span>.</p>
 </body>
 </html>
