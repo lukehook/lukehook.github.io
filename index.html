@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <script type="text/javascript">
+    window.onload = async () => fetch("/api/ip").then(r=>r.json()).then(data => {
+    console.log(data);
+};
+  </script>
 <h1>Hello World</h1>
 <h2>My name is Luke Hook</h2>
 <p>This site is hosted with GitHub Pages.</p>
