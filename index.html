@@ -11,17 +11,5 @@
   
   <p>It will also serve as my online CV - because why not.</p>
   
-  <p>If for some peculiar reason you're unsure where you're browsing from - click the button below to find out.</p>
-  
-  <button onclick="check()">Click me</button>
-  
-  <p id="result"></p>
-  <script type="text/javascript">
-    check = async () => fetch("/api/ip").then(r=>r.json()).then(data => {
-      const country = data.countryCode;
-      const ip = data.connectingIP;
-      document.getElementById("result").textContent = `You are currently browsing from IP ${ip} in ${country}.`;
-    });
-  </script>
 </body>
 </html>
